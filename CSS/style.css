@@ -1,0 +1,67 @@
+/* File: style.css
+
+
+
+w3schools.com and developer.mozilla.org were used as learning and reference material
+to structure this assignment.
+
+Copyright (c) 2023. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Last updated: Jun 30, 2023
+
+Resources utilized along side w3School and developer.mozilla.org:
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell
+https://www.w3schools.com/jsref/dom_obj_table.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+jquery
+https://jqueryvalidation.org/required-method/
+https://jqueryvalidation.org/jQuery.validator.addMethod/
+jquery ui
+https://jqueryui.com/tabs/#manipulation
+https://jqueryui.com/slider/#colorpicker
+https://api.jqueryui.com/slider/#event-change
+https://www.w3schools.com/jquery/sel_gt.asp
+more jquery stuff
+https://jqueryui.com/draggable/#snap-to
+https://www.w3schools.com/jquery/html_attr.asp
+https://api.jqueryui.com/sortable/#event-receive
+https://cs.uml.edu/~wzhou/GUI_AJAX_examples/
+https://api.jquery.com/find/ */
+
+
+.draggable {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 73/80; /*roughly the pixel ratio of a single tile on the OneLine scrabble board image */;
+    object-fit: cover;
+    border-radius: 10%;
+    float: left;
+}
+
+/* keeps the players hand sized correctly for all the game pieces. 
+external js updates the height of this */
+#playerHand {
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    padding-left: 3%;
+    padding-top: 2%;
+    background-image: url('../scrabble-tile-holder-406774_640.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* border: 1px solid #ff0000; debug box */
+}
+/* maintains the aspect ratio  and sets the game board one line background image but like above 
+this is updated in size by external js */
+#gameBoard {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1129/80; /*the pixel ratio of the OneLine scrabble board image */
+    background-image: url('../Scrabble_Board_OneLine.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid #ff0000; debug box */
+    
+}
