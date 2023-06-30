@@ -53,6 +53,10 @@ $("#gameBoard").sortable({
         console.log(gameBoardOrder);
         printCurrentBoard();
     },
+    stop: function (event, ui) {
+        // disable the draggable widget
+        $(this).draggable("disable");
+    },
     //remove the draggable from the gameBoard and put it back in the playerHand
     remove: function (event, ui) {
         //remove the element that was just removed from gameBoardOrder
@@ -70,6 +74,14 @@ $("#gameBoard").sortable({
 //handles the eventlistener on checkScore button
 $("#checkScore").click(function () {
     tallyScore();
+});
+//new round button, clears everything and refreshes the hand
+$("#newRound").click(function () {
+    //clears the board
+    $("#gameBoard").empty();
+    gameBoardOrder = [];
+    score = 0;
+    fillPlayerHand(modifiablePiecesArr);
 });
 
 
